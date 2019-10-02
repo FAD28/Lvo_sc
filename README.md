@@ -17,7 +17,7 @@ Ein Scraping tool das:
 13- Wieder Compile Data funktion ausführt
 14- Daten in einer xlsx Datei abspeichert
 
-Probleme:
+Problem:
 Beim abspeichern der Daten überschreibt er das vorhandene xlsx file
 
 Ziel:
