@@ -11,7 +11,7 @@ import time
 # 4- Loginbutton.click()
 # 5- Matchbutton.click()   # Ab hier kommt ein loop
 # 6- Profil.click()
-# 7- Steckbrief.click() # BIS HIERHIN BIN ICH GEKOMMEN. (NO SUCH ELEMENT ERROR)
+# 7- Steckbrief.click() 
 # 8- df.to_excel Data
 # 9- driver.back
 # 10- Match.button.click()
@@ -23,7 +23,7 @@ import time
 class LovooScraping():
 
     def __init__(self):
-        self.driver= webdriver.Chrome(executable_path='/Users/Fabi/Downloads/chromedriver')
+        self.driver= webdriver.Chrome(executable_path='/User/Driver/chromedriver')
         self.df = pd.DataFrame()
         self.name_list = []
         self.wohnort_list = []
@@ -109,19 +109,13 @@ class LovooScraping():
 
 writer = pd.ExcelWriter("Lovoo.xlsx")
 
+###################################################################
+
 driver = LovooScraping()  # // steht jetzt im for-loop
 
 link = 'https://de.lovoo.com/'
 
 driver.driver.get(link)
-
-# XPath:
-# /html/body/div[1]/div/div[3]/button[2] /html/body/div[1]/div/div[3]/button[2]  //button[@class='o-button u-padding-y-xxs u-text-light u-border-radius-round o-button--baby-blue u-text-white']")
-
-# Click Einloggen Button:
-# einloggen_button = driver.find_element_by_class_name("o-button u-padding-y-xxs u-text-light u-border-radius-round o-button--baby-blue u-text-white")
-# einloggen_button.click()
-
 
 einloggen_button = driver.driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/button[2]")
 einloggen_button.click()
@@ -152,18 +146,3 @@ for i in range(2):
 writer.save()
 
 driver.driver.close()
-
-# for i in range(10):
-#     driver = LovooScraping()
-#     driver.driver.find_element_by_xpath("//*[@id='page-content']/match/div/div/div[1]/a/div").click()
-#     time.sleep(5)
-#     driver.driver.find_element_by_css_selector('#profile-details > div > div.space-before-sm > ul > li:nth-child(2) > a').click()
-#     time.sleep(5)
-#     driver.compile_data()
-#     driver.back()
-#     driver.forward()
-#     driver.compile_data()
-
-# driver.df.to_excel(writer, sheet_name='Lovoo')
-#
-# writer.save()
