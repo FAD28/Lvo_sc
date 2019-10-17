@@ -25,7 +25,7 @@ from os import path
 class LovooScraping():
 
     def __init__(self):
-        self.driver= webdriver.Chrome(executable_path='/Users/Fabi/Downloads/chromedriver')
+        self.driver= webdriver.Chrome(executable_path='/Users/chromedriver')
         self.df = pd.DataFrame()
         self.name_list = []
         self.wohnort_list = []
