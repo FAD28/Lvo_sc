@@ -16,10 +16,3 @@ Ein Scraping tool das:
 12- Wieder Steckbrief öffnet
 13- Wieder Compile Data funktion ausführt
 14- Daten in einer xlsx Datei abspeichert
-
-Problem:
-Beim abspeichern der Daten überschreibt er das vorhandene xlsx file
-
-Ziel:
-Adding the new Data in a new row below the old one
-
